@@ -1,0 +1,2 @@
+[routers]
+172.16.152.164 ansible_connection=ssh ansible_ssh_user=ubuntu ansible_ssh_pass=admin

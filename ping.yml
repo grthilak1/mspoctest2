@@ -1,0 +1,8 @@
+- hosts: all  
+
+  become: yes  
+
+  tasks:
+    - name: Execute ping
+      shell: "ping -c 4 google.com"
+

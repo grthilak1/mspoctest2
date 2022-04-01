@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+
+  become: yes
+
+  tasks:
+    - name: Execute TraceRoute
+      shell: "traceroute google.com"
+
+
