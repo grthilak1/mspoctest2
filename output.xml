@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220405 13:22:42.609" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.8.10 on linux)" generated="20220405 13:25:58.698" rpa="false" schemaversion="2">
 <suite id="s1" name="Processtest" source="/root/processtest.robot">
 <test id="s1-t1" name="Test1">
 <kw name="Run Process" library="Process">
@@ -7,13 +7,13 @@
 <arg>-c</arg>
 <arg>print('Hello, world!')</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<msg timestamp="20220405 13:22:42.671" level="INFO">Starting process:
+<msg timestamp="20220405 13:25:58.723" level="INFO">Starting process:
 python3 -c "print('Hello, world!')"</msg>
-<msg timestamp="20220405 13:22:42.678" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20220405 13:22:42.727" level="INFO">Process completed.</msg>
-<status status="PASS" starttime="20220405 13:22:42.671" endtime="20220405 13:22:42.728"/>
+<msg timestamp="20220405 13:25:58.730" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220405 13:25:58.761" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20220405 13:25:58.723" endtime="20220405 13:25:58.761"/>
 </kw>
-<status status="PASS" starttime="20220405 13:22:42.668" endtime="20220405 13:22:42.731"/>
+<status status="PASS" starttime="20220405 13:25:58.722" endtime="20220405 13:25:58.761"/>
 </test>
 <test id="s1-t2" name="Test2">
 <kw name="Run Process" library="Process">
@@ -21,23 +21,23 @@ python3 -c "print('Hello, world!')"</msg>
 <arg>ansible</arg>
 <arg>--version</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<msg timestamp="20220405 13:22:42.735" level="INFO">Starting process:
+<msg timestamp="20220405 13:25:58.767" level="INFO">Starting process:
 ansible --version</msg>
-<msg timestamp="20220405 13:22:42.741" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20220405 13:22:43.674" level="INFO">Process completed.</msg>
-<msg timestamp="20220405 13:22:43.674" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20220405 13:22:42.734" endtime="20220405 13:22:43.674"/>
+<msg timestamp="20220405 13:25:58.772" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220405 13:25:59.175" level="INFO">Process completed.</msg>
+<msg timestamp="20220405 13:25:59.176" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20220405 13:25:58.767" endtime="20220405 13:25:59.176"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${result.rc}</arg>
 <arg>${0}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220405 13:22:43.674" endtime="20220405 13:22:43.676"/>
+<status status="PASS" starttime="20220405 13:25:59.176" endtime="20220405 13:25:59.177"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>stdout: ${result.stdout}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220405 13:22:43.677" level="INFO">stdout: ansible [core 2.12.2]
+<msg timestamp="20220405 13:25:59.178" level="INFO">stdout: ansible [core 2.12.2]
   config file = /root/ansible.cfg
   configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
   ansible python module location = /usr/lib/python3/dist-packages/ansible
@@ -46,9 +46,9 @@ ansible --version</msg>
   python version = 3.8.10 (default, Mar 15 2022, 12:22:08) [GCC 9.4.0]
   jinja version = 2.11.3
   libyaml = True</msg>
-<status status="PASS" starttime="20220405 13:22:43.676" endtime="20220405 13:22:43.677"/>
+<status status="PASS" starttime="20220405 13:25:59.178" endtime="20220405 13:25:59.178"/>
 </kw>
-<status status="PASS" starttime="20220405 13:22:42.732" endtime="20220405 13:22:43.677"/>
+<status status="PASS" starttime="20220405 13:25:58.765" endtime="20220405 13:25:59.178"/>
 </test>
 <test id="s1-t3" name="Test3">
 <kw name="Run Process" library="Process">
@@ -56,23 +56,23 @@ ansible --version</msg>
 <arg>ansible-playbook</arg>
 <arg>getip.yml</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<msg timestamp="20220405 13:22:43.678" level="INFO">Starting process:
+<msg timestamp="20220405 13:25:59.179" level="INFO">Starting process:
 ansible-playbook getip.yml</msg>
-<msg timestamp="20220405 13:22:43.681" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20220405 13:22:46.675" level="INFO">Process completed.</msg>
-<msg timestamp="20220405 13:22:46.675" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20220405 13:22:43.678" endtime="20220405 13:22:46.675"/>
+<msg timestamp="20220405 13:25:59.182" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220405 13:26:01.387" level="INFO">Process completed.</msg>
+<msg timestamp="20220405 13:26:01.388" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20220405 13:25:59.179" endtime="20220405 13:26:01.388"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${result.rc}</arg>
 <arg>${0}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220405 13:22:46.676" endtime="20220405 13:22:46.677"/>
+<status status="PASS" starttime="20220405 13:26:01.388" endtime="20220405 13:26:01.390"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>stdout: ${result.stdout}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220405 13:22:46.678" level="INFO">stdout: 
+<msg timestamp="20220405 13:26:01.390" level="INFO">stdout: 
 PLAY [all] *********************************************************************
 
 TASK [Gathering Facts] *********************************************************
@@ -86,9 +86,9 @@ ok: [172.16.152.164] =&gt; {
 PLAY RECAP *********************************************************************
 172.16.152.164             : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 </msg>
-<status status="PASS" starttime="20220405 13:22:46.677" endtime="20220405 13:22:46.678"/>
+<status status="PASS" starttime="20220405 13:26:01.390" endtime="20220405 13:26:01.390"/>
 </kw>
-<status status="PASS" starttime="20220405 13:22:43.678" endtime="20220405 13:22:46.678"/>
+<status status="PASS" starttime="20220405 13:25:59.179" endtime="20220405 13:26:01.391"/>
 </test>
 <test id="s1-t4" name="Test4">
 <kw name="Run Process" library="Process">
@@ -96,23 +96,23 @@ PLAY RECAP *********************************************************************
 <arg>ansible-playbook</arg>
 <arg>ping.yml</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<msg timestamp="20220405 13:22:46.679" level="INFO">Starting process:
+<msg timestamp="20220405 13:26:01.392" level="INFO">Starting process:
 ansible-playbook ping.yml</msg>
-<msg timestamp="20220405 13:22:46.682" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20220405 13:22:52.031" level="INFO">Process completed.</msg>
-<msg timestamp="20220405 13:22:52.031" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20220405 13:22:46.679" endtime="20220405 13:22:52.032"/>
+<msg timestamp="20220405 13:26:01.394" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220405 13:26:07.026" level="INFO">Process completed.</msg>
+<msg timestamp="20220405 13:26:07.026" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20220405 13:26:01.392" endtime="20220405 13:26:07.026"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${result.rc}</arg>
 <arg>${0}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220405 13:22:52.033" endtime="20220405 13:22:52.034"/>
+<status status="PASS" starttime="20220405 13:26:07.027" endtime="20220405 13:26:07.028"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>stdout: ${result.stdout}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220405 13:22:52.037" level="INFO">stdout: 
+<msg timestamp="20220405 13:26:07.029" level="INFO">stdout: 
 PLAY [all] *********************************************************************
 
 TASK [Gathering Facts] *********************************************************
@@ -124,9 +124,9 @@ changed: [172.16.152.164]
 PLAY RECAP *********************************************************************
 172.16.152.164             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 </msg>
-<status status="PASS" starttime="20220405 13:22:52.034" endtime="20220405 13:22:52.037"/>
+<status status="PASS" starttime="20220405 13:26:07.028" endtime="20220405 13:26:07.029"/>
 </kw>
-<status status="PASS" starttime="20220405 13:22:46.678" endtime="20220405 13:22:52.037"/>
+<status status="PASS" starttime="20220405 13:26:01.391" endtime="20220405 13:26:07.029"/>
 </test>
 <test id="s1-t5" name="Test4">
 <kw name="Run Process" library="Process">
@@ -134,23 +134,23 @@ PLAY RECAP *********************************************************************
 <arg>ansible-playbook</arg>
 <arg>traceroute.yml</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<msg timestamp="20220405 13:22:52.039" level="INFO">Starting process:
+<msg timestamp="20220405 13:26:07.031" level="INFO">Starting process:
 ansible-playbook traceroute.yml</msg>
-<msg timestamp="20220405 13:22:52.041" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20220405 13:22:56.310" level="INFO">Process completed.</msg>
-<msg timestamp="20220405 13:22:56.310" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<status status="PASS" starttime="20220405 13:22:52.038" endtime="20220405 13:22:56.310"/>
+<msg timestamp="20220405 13:26:07.034" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220405 13:26:10.994" level="INFO">Process completed.</msg>
+<msg timestamp="20220405 13:26:10.995" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20220405 13:26:07.031" endtime="20220405 13:26:10.995"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${result.rc}</arg>
 <arg>${0}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220405 13:22:56.311" endtime="20220405 13:22:56.313"/>
+<status status="PASS" starttime="20220405 13:26:10.995" endtime="20220405 13:26:10.997"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>stdout: ${result.stdout}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220405 13:22:56.313" level="INFO">stdout: 
+<msg timestamp="20220405 13:26:10.997" level="INFO">stdout: 
 PLAY [all] *********************************************************************
 
 TASK [Gathering Facts] *********************************************************
@@ -162,9 +162,9 @@ changed: [172.16.152.164]
 PLAY RECAP *********************************************************************
 172.16.152.164             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 </msg>
-<status status="PASS" starttime="20220405 13:22:56.313" endtime="20220405 13:22:56.313"/>
+<status status="PASS" starttime="20220405 13:26:10.997" endtime="20220405 13:26:10.997"/>
 </kw>
-<status status="PASS" starttime="20220405 13:22:52.038" endtime="20220405 13:22:56.314"/>
+<status status="PASS" starttime="20220405 13:26:07.030" endtime="20220405 13:26:10.997"/>
 </test>
 <test id="s1-t6" name="Test4">
 <kw name="Run Process" library="Process">
