@@ -168,4 +168,59 @@ PLAY RECAP *********************************************************************
 </test>
 <test id="s1-t6" name="Test4">
 <kw name="Run Process" library="Process">
-<var>${result}
+<var>${result}</var>
+<arg>python3</arg>
+<arg>git_push.py</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<msg timestamp="20220405 15:21:41.122" level="INFO">Starting process:
+python3 git_push.py</msg>
+<msg timestamp="20220405 15:21:41.125" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20220405 15:21:42.574" level="INFO">Process completed.</msg>
+<msg timestamp="20220405 15:21:42.575" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<status status="PASS" starttime="20220405 15:21:41.122" endtime="20220405 15:21:42.575"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${result.rc}</arg>
+<arg>${0}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220405 15:21:42.575" endtime="20220405 15:21:42.577"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>stdout: ${result.stdout}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220405 15:21:42.577" level="INFO">stdout: output: Reinitialized existing Git repository in /root/.git/
+
+error:
+output: 
+error:
+output: [main 817092e] updated
+ 3 files changed, 48 insertions(+), 48 deletions(-)
+
+error:
+output: 
+error:
+output: 
+error:
+output: 
+error:</msg>
+<status status="PASS" starttime="20220405 15:21:42.577" endtime="20220405 15:21:42.577"/>
+</kw>
+<status status="PASS" starttime="20220405 15:21:41.121" endtime="20220405 15:21:42.578"/>
+</test>
+<status status="PASS" starttime="20220405 15:21:23.807" endtime="20220405 15:21:42.579"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Processtest">Processtest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220405 15:21:32.134" level="WARN">Multiple test cases with name 'Test4' executed in test suite 'Processtest'.</msg>
+<msg timestamp="20220405 15:21:41.121" level="WARN">Multiple test cases with name 'Test4' executed in test suite 'Processtest'.</msg>
+</errors>
+</robot>
